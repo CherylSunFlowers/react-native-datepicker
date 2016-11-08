@@ -19,8 +19,6 @@ let style = StyleSheet.create({
   dateInput: {
     flex: 1,
     height: 40,
-    borderWidth: 1,
-    borderColor: '#aaa',
     alignItems: 'center',
     justifyContent: 'center'
   },
@@ -28,6 +26,7 @@ let style = StyleSheet.create({
     color: '#333'
   },
   placeholderText: {
+    fontSize: 16,
     color: '#c9c9c9'
   },
   datePickerMask: {
@@ -52,7 +51,7 @@ let style = StyleSheet.create({
   },
   btnTextText: {
     fontSize: 16,
-    color: '#46cf98'
+    color: '#0084ff'
   },
   btnTextCancel: {
     color: '#666'
