@@ -8,6 +8,7 @@ import {
   DatePickerAndroid,
   TimePickerAndroid,
   DatePickerIOS,
+  Dimensions,
   Platform,
   Animated
 } from 'react-native';
@@ -232,7 +233,7 @@ class DatePicker extends Component {
       this.state.disabled && Style.disabled,
       this.state.disabled && customStyles.disabled
     ];
-
+    const windowSize = Dimensions.get('window');
     return (
       <TouchableHighlight
         style={[Style.dateTouch, this.props.style]}
@@ -268,6 +269,9 @@ class DatePicker extends Component {
                   <Animated.View
                     style={[Style.datePickerCon, {height: this.state.animatedHeight}, customStyles.datePickerCon]}
                   >
+                    <View style={{ position: 'absolute', height: 40, width: 120, top: 2, left: (windowSize.width - 120) / 2, justifyContent: 'center', alignItems: 'center' }}>
+                     <Text style={{ fontSize: 18 }}>选择出生日期</Text>
+                    </View>
                     <DatePickerIOS
                       date={this.state.date}
                       mode={this.props.mode}
