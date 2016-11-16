@@ -19,7 +19,7 @@ let style = StyleSheet.create({
   dateInput: {
     flex: 1,
     height: 40,
-    alignItems: 'center',
+    alignItems: 'flex-end',
     justifyContent: 'center'
   },
   dateText: {
